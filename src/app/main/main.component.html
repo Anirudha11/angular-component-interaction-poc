@@ -1,0 +1,14 @@
+<!--<app-child [counter]="counter" (valueChange)="displayCounter($event)"></app-child>-->
+
+<!--{{counter}}-->
+
+<!--<app-grandchild [flagMain]="flagMain" (flagChange)="displayFlag($event)"></app-grandchild>
+
+{{flagMain}}-->
+
+
+<button [hidden]="flagSecondChild" (click)="showSecondChild()">Second Child</button>
+<div *ngIf="flagSecondChild"> 
+<app-second-child [flagSecondChild]="flagSecondChild" (flagSecondChildChange)="displayFlagSecondChild($event)"></app-second-child>
+{{flagSecondChild}}
+</div>
